@@ -227,6 +227,11 @@ object HomeTweetTypePredicates {
         candidate
           .getOrElse(AuthorIdFeature, None).contains(candidate.getOrElse(DDGStatsElonFeature, 0L))),
     (
+      "author_is_angrymouse",
+      candidate =>
+        candidate
+          .getOrElse(AuthorIdFeature, None).contains(candidate.getOrElse(DDGStatsAngrymouseFeature, 0L)))
+    (
       "author_is_power_user",
       candidate =>
         candidate
